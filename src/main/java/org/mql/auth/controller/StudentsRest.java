@@ -24,6 +24,7 @@ public class StudentsRest {
 
 
 
+    @PostMapping("/login")
     public ResponseEntity<Student> getStudent(@RequestParam("username") String username, @RequestParam("password") String password){
         Optional<Student> student = db.getStudent(username, password);
         return  ResponseEntity.of(student);
